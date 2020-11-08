@@ -1,13 +1,14 @@
 package pastpaperbank;
 
 public class PastPaper {
-    public byte subjectid;
+    public byte subjectID;
     public String year;
     public String lecturer;
+    public boolean verificationStatus; 
     
     public String subjectName(){
         String subject = null;
-        switch(subjectid){
+        switch(subjectID){
             case 1:{
                 subject = "Programming 1";
                 break;
@@ -26,12 +27,5 @@ public class PastPaper {
             }
         }
         return subject;
-    }
-    public static void main(String[] args){
-        PastPaper SE1 = new PastPaper();
-        SE1.lecturer = "Isna Asfi Mudzolifah";
-        SE1.year = "2019";
-        SE1.subjectid = 4;
-        System.out.println(SE1.subjectName());
     }
 }

@@ -1,14 +1,34 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pastpaperbank;
 
-/**
- *
- * @author User
- */
+import java.io.File;
+import java.io.IOException;
+
 public class User {
-    
+    int userID;
+    String userName;
+    public User(int newID, String newName){
+        this.userID = newID;
+        this.userName = newName;
+    }
+    public int getID(){
+        return userID;
+    }
+    public String getName(){
+        return userName;
+    }
+    public void uploadFile(){
+      try {
+        File myObj = new File("filename.txt");
+            if (myObj.createNewFile()) {
+                 System.out.println("File created: " + myObj.getName());
+            } 
+            else {
+                System.out.println("File already exists.");
+            }
+        } 
+      catch (IOException e) {
+        System.out.println("An error occurred.");
+        e.printStackTrace();
+        }
+    }
 }
