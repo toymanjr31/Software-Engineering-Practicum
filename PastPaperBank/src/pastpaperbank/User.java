@@ -2,6 +2,7 @@ package pastpaperbank;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class User {
     int userID;
@@ -16,7 +17,7 @@ public class User {
     public String getName(){
         return userName;
     }
-    public void uploadFile(){
+    public static void uploadFile(){
       try {
         File myObj = new File("filename.txt");
             if (myObj.createNewFile()) {
@@ -28,8 +29,8 @@ public class User {
         } 
       catch (IOException e) {
         System.out.println("An error occurred.");
-        e.printStackTrace();
         }
       
     }
+    
 }

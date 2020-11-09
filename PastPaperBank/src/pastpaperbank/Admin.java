@@ -1,14 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pastpaperbank;
 
-/**
- *
- * @author User
- */
 public class Admin {
-    
+    int adminID;
+    String adminName;
+    public Admin(int newID, String newName){
+        this.adminID = newID;
+        this.adminName = newName;
+    }
+    public boolean verify(){
+        //todo
+        return false;
+    }
 }
