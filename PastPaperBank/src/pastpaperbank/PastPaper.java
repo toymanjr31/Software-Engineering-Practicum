@@ -1,12 +1,25 @@
 package pastpaperbank;
 
 public class PastPaper {
-    public byte subjectID;
+    public int subjectID;
     public String year;
     public String lecturer;
-    public boolean verificationStatus; 
     
-    public String subjectName(){
+    public PastPaper(int subjectID, String year, String lecturer){
+        this.subjectID = subjectID;
+        this.year = year;
+        this.lecturer = lecturer;
+    }
+    public int getsubjectID(){
+        return subjectID;
+    }
+    public String getYear(){
+        return year;
+    }
+    public String getLecturer(){
+        return lecturer;
+    }
+    public String getsubjectName(){
         String subject = null;
         switch(subjectID){
             case 1:{
